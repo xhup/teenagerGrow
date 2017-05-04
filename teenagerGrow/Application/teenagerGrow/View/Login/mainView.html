@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" media="screen" href="__PUBLIC__/css/teenagerGrow/unvStyle.css">
+    <meta charset="UTF-8">
+    <title>网站首页</title>
+</head>
+<body>
+
+<!--<?php-->
+<!--include ("webHead.php");//网页头-->
+
+<!--网页头-->
+<div id="webHead"></div>
+<div class="welcomeMain">
+    <div class="line2_image">
+        <img src="__PUBLIC__/others/teenagerGrow/images/line_image2.jpg" border="0" width="100%" height="100%">
+        <a href="{:U('addChild/addChildInformation')}">&nbsp新增儿童信息>></a>
+    </div>
+
+<div class="data_image">
+       <img src="__PUBLIC__/others/teenagerGrow/images/data_base1.png" border="0" width="100%" height="100%">
+        <a href="{:U('LookChild/allChildTable')}">&nbsp儿童信息查看>></a>
+</div>
+
+<div class="line1_image">
+    <img src="__PUBLIC__/others/teenagerGrow/images/line_image1.jpg" border="0" width="100%" height="100%">
+    <a href="">数据库管理>></a>
+</div>
+
+
+</div>
+<div class="Hyperlink">
+    <h4 class="bomLine">友情链接</h4>
+<ul>
+    <li><a href="http://www.haodf.com/" target="_blank">好大夫在线</a></li>
+    <li><a href="http://guahao.zjol.com.cn/" target="_blank">挂号网</a></li>
+</ul>
+</div>
+<script src="__PUBLIC__/js/jquery-2.1.1.min.js"></script>
+<script>
+    $(function(){
+        $("#webHead").load("webHead.html");
+    })
+</script>
+</body>
+</html>

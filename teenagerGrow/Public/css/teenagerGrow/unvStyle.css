@@ -1,0 +1,353 @@
+
+body{
+    width: 1400px;
+    height: 700px;
+}
+
+hr{
+    width: 100%;
+    /*color: coral;*/
+    margin-top: 20px;
+    height: 5px;
+    background-color: cornflowerblue;
+}
+#mainBody {width:100%;height:auto;position:absolute;z-index:-1;}
+.cloud {position:absolute;top:100px;left:0px;width:100%;height:100%;background:url("../../others/teenagerGrow/images/cloud.png") no-repeat;z-index:1;opacity:0.5;}
+#cloud2 {z-index:2;}
+.logintop{height:47px; position:absolute;left:0; top:0; background:url("../../others/teenagerGrow/images/loginbg1.png") repeat-x;z-index:100; width:100%;}
+.logintop span{color:#fff; line-height:47px; background:url("../../others/teenagerGrow/images/loginsj.png") no-repeat 21px 18px; text-indent:44px; color:#afc5d2; float:left;}
+.loginbody{background-image:url("../../others/teenagerGrow/images/loginbg3.png");background-repeat: no-repeat ;margin-left:450px;margin-top: 80px; width:100%; height:auto; overflow:hidden; position:absolute; top:47px;}
+.loginbox{width:692px; height:336px; background-image: url("../../others/teenagerGrow/images/logininfo.png");background-repeat: no-repeat;margin-top:30px;}
+.loginbox ul{margin-top:88px; margin-left:190px;}
+.loginbox ul li{margin-bottom:25px; list-style-type: none;}
+.loginbox ul li label{color:#687f92; padding-left:25px;}
+.loginbox ul li label a{color:#687f92;}
+.loginbox ul li label a:hover{color:#3d96c9;}
+.loginbox ul li label input{margin-right:5px;}
+.loginuser{width:300px; height:46px; background-image:url("../../others/teenagerGrow/images/loginuser.png");background-repeat: no-repeat; border:none; line-height:46px; padding-left:44px;margin-top: 80px;color:#90a2bc;}
+.loginpwd{width:300px; height:46px; background-image:url("../../others/teenagerGrow/images/loginpassword.png");background-repeat: no-repeat; border:none;line-height:46px; padding-left:44px; font-size:14px; color:#90a2bc;}
+.loginbtn{width:111px;height:36px; background-image:url("../../others/teenagerGrow/images/buttonbg.png");background-repeat:repeat-x;border:none; font-size:14px; font-weight:bold; color:#fff;cursor:pointer; line-height:36px;}
+.first{
+   margin-top: 25px;
+   margin-left:5%;
+    font-size: 35px;
+    color: darkcyan;
+    font-style: italic;
+}
+h2{
+    color: cornflowerblue;
+    margin-left: 50px;
+
+}
+.marquee {
+    height: 20px;
+    color: firebrick;
+}
+.rightTag{
+    margin-left:50%;
+}
+p{
+    margin-left: 500px;
+}
+a:link{
+   color: black;
+    text-decoration: none;
+}
+a:visited{
+    color: black;
+}
+a:hover{
+    color: red;
+    text-decoration:underline;
+}
+img.background{
+    width: 100%;
+    height:100%;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-width: 1450px;
+    min-height: 750px;
+
+
+}
+
+#webHead{
+    width:100%;
+    height:20%;
+}
+.welcomeMain{
+    width: 100%;
+    height: 70%;
+    position: relative;
+
+}
+.welcomeMain .line2_image{
+    /*border: dotted;*/
+    position: absolute;
+    width: 125px;
+    height: 120px;
+    margin-top:10%;
+    margin-left:20%;
+    float: left;
+
+}
+.welcomeMain .data_image{
+    position: absolute;
+    width: 125px;
+    height: 120px;
+    /*margin-top:120px;*/
+    /*margin-left:600px;*/
+    margin-top:10%;
+    margin-left:45%;
+    float: left;
+
+
+
+}
+.welcomeMain .line1_image{
+    position: absolute;
+    width: 125px;
+    height: 120px;
+    /*margin-top:120px;*/
+    /*margin-left:900px;*/
+    margin-top:10%;
+    margin-left:70%;
+    float: left;
+}
+
+#doctorInfoForm {
+
+    margin-top:50px;
+    margin-left: 40%;
+    width:400px;
+    height:300px;
+    
+}
+#registerDiv{
+    margin-top:100px;
+    margin-left: 35%;
+    padding:30px 50px 80px 50px;
+    width: 400px;
+    height: 250px;
+    background-image:url("../../others/teenagerGrow/images/registerbg.jpg");
+    /*background: rgb(247, 247, 247);*/
+    border: 1px solid lightblue ;
+    border-radius: 20px;
+ }
+#registerDiv table{
+    margin-top: 20px;
+    border: solid bisque;
+    border:0;
+    width:400px;
+    height: 200px;
+}
+.registerIcon{
+    width: 80px;
+    height: 80px;
+    float: left;
+
+}
+#registerDiv h2{
+    float: left;
+    color: green;
+    margin-left:70px;
+}
+.submitBtn{
+    width:80px;
+    height:36px;
+    background-image:url("../../others/teenagerGrow/images/buttonbg.png");
+    background-repeat:repeat-x;border:none;
+    font-size:14px;
+    font-weight:bold;
+    color:#fff;
+}
+.Hyperlink{
+    /*border: dotted;*/
+    width: 100%;
+    height: 15%;
+    /*margin-top:200px;*/
+    /*margin-left:250px;*/
+    float: left;
+
+}
+.bomLine{
+    padding: 0 20px 0;
+    margin: 20px 0;
+    line-height:2px;
+    border-left: 600px solid #ddd;
+    border-right: 600px solid #ddd;
+    text-align: center;
+
+}
+#child_inform_link{
+    position: absolute;
+    top:365px;
+    left: 425px;
+    color: blue;
+    font-weight: bold;
+}
+#weight_and_height{
+    position: absolute;
+    top: 355px;
+    left: 705px;
+    color: blue;
+    font-weight: bold;
+
+}
+.table_tag{
+    position: absolute;
+    padding-top: 10px;
+    padding-left: 520px;
+
+}
+#upLinkImage{
+    position: absolute;
+    border: groove;
+    width: 890px;
+    height: 300px;
+    background-color:lightcyan;
+}
+.upImage{
+    position: absolute;
+    margin-left: 350px;
+    margin-top: 100px;
+    float: left;
+
+}
+.mouseOverColor{
+background-color:powderblue;
+}
+.mouseClickColor{
+ background-color:powderblue;
+}
+/*#mainTable th{background:url('../../others/teenagerGrow/images/th.gif') repeat-x; height:34px; line-height:34px; border-bottom:solid 1px #b6cad2;border-radius: 5px; text-indent:11px; text-align:left; padding-left: 10px;}*/
+
+
+
+
+/*left.html*/
+.lefttop{background:url('../../others/teenagerGrow/images/lefttop.gif') repeat-x;height:40px;color:#fff;font-size:14px;line-height:40px;}
+.lefttop span{margin-left:8px; margin-top:10px;margin-right:8px; background:url('../../others/teenagerGrow/images/leftico.png') no-repeat; width:20px; height:21px;float:left;}
+.leftmenu{width:187px;padding-bottom: 9999px;margin-bottom: -9999px;margin-top: 0px; overflow:hidden; background:url('../../others/teenagerGrow/images/leftline.gif') repeat-y right;}
+.leftmenu dd{background:url('../../others/teenagerGrow/images/leftmenubg.gif') repeat-x;line-height:35px;font-weight:bold;font-size:14px;border-right:solid 1px #b7d5df;margin-left: 0px}
+.leftmenu dd span{float:left;margin:10px 8px 0 12px;}
+.leftmenu dd .menuson{display:none;margin-top: 0px}
+.leftmenu dd:first-child .menuson{display:block;}
+.menuson {line-height:30px; font-weight:normal;}
+.menuson li{cursor:pointer;list-style-type: none;margin-left: -40px; }
+.menuson li.active{position:relative; background:url('../../others/teenagerGrow/images/libg.png') repeat-x; line-height:30px; color:#fff;}
+.menuson li cite{display:block; float:left; margin-left:32px; background:url('../../others/teenagerGrow/images/list.gif') no-repeat; width:16px; height:16px; margin-top:7px;}
+.menuson li.active cite{background:url('../../others/teenagerGrow/images/list1.gif') no-repeat;}
+.menuson li.active i{display:block; background:url('../../others/teenagerGrow/images/sj.png') no-repeat; width:6px; height:11px; position:absolute; right:0;z-index:10000; top:9px; right:-1px;}
+.menuson li a{ display:block; *display:inline; *padding-top:5px;}
+.menuson li.active a{color:#fff;}
+.title{cursor:pointer;}
+
+/*childBaseInformationView.php*/
+
+.messageInput td{
+    padding-top: 5px;
+    padding-left: 10px;
+    width: 80px;
+    line-height: 20px;
+
+
+}
+/*detailInformationView.php*/
+
+.div1{width:100%;height:auto;overflow:hidden;}
+.div1 .top{width:100%;height:auto;}
+.div1 .div3{width:100%;height:auto;overflow:hidden;}
+.div1 .div3 .left{width:190px;height:auto;float:left;}
+.div1 .div3 .right1{width:1000px;height:auto;float:left;margin-left: 25px;margin-top: 20px;font-weight:bold;font-size:18px;}
+.div1 .div3 .right1 .rightTop{width:100px;height:auto;float:right;margin-left: 25px;margin-top: 20px;}
+.div1 .div3 .right2{width:1050px;height:auto;float:left;}
+.div1 .div3 .bottom1{width:50px;height:auto;float:left; margin-top: 60px;margin-left: 20px}
+.div1 .div3 .bottom2{width:890px;height:auto;float:left; margin-top: 20px;margin-left: 10px}
+
+#leftList{
+    width:190px;
+    height:80%;
+}
+#hwQueryMain{
+    margin-top: 50px;
+    margin-left: 420px;
+    width: 600px;
+    height: 500px;
+    position: absolute;
+}
+
+/*viewPhoto.php*/
+
+.gallery {
+    float: left;
+    background: #ffffff;
+    padding: 20px 20px 10px 20px;
+    margin: 0;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    /*border: dashed;*/
+    /*position: relative;*/
+}
+.gallery div {
+    /*控制缩略图显示格子的大小*/
+    width: 100px;
+    height: 100px;
+    float: left;
+    padding: 0 10px 10px 20px;
+    position: relative;
+}
+.gallery div:nth-child(6n) {
+    padding-right: 0;
+}
+.gallery a,
+.gallery img {
+    float: left;
+}
+.gallery .deleteImg{
+    width: 50px;
+    height: 40px;
+    top: 0px;
+    right: 0px;
+    position: absolute;
+
+}
+
+
+/*addChildInformation.php*/
+#addNewChild{
+    margin-top: 50px;
+}
+
+/*changePasswdView.php*/
+#changeDoctorPassword table{
+    margin-top:50px;
+    margin-left: 40%;
+    width:400px;
+    height:200px;
+}
+
+/*allChildTable.html*/
+.tableSelected{
+    background: #0088cc;
+}
+.even{
+    background-color:#d9edf7;
+}
+.odd{
+    background-color:whitesmoke ;
+}
+#mainTable td{
+    height: 30px;
+    padding-left: 25px;
+}
+/*身高体重图表修改的弹出对话框*/
+#dialog-form,#dialog-form2{
+    display: none;
+}

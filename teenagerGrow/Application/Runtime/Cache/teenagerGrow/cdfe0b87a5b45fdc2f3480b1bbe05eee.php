@@ -1,0 +1,266 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>身高体重输入</title>
+    <link rel="stylesheet" media="screen" href="/thinkphp/Public/css/teenagerGrow/unvStyle.css">
+    <link rel="stylesheet" media="screen" href="/thinkphp/Public/thirdPlug/DataTables/css/jquery.dataTables.css">
+    <link rel="stylesheet" media="screen" href="/thinkphp/Public/thirdPlug/jqueryUI/jquery-ui.min.css">
+</head>
+<body>
+<div>
+    <table id="HeightAndWeightListTable" class="display" align="center" border="0" width="90%" cellspacing="0" cellpadding="0">
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>就诊号</th>
+            <th>性别</th>
+            <th>年龄</th>
+            <th>身高</th>
+            <th>体重</th>
+            <th>导入时间</th>
+            <th>导入者</th>
+            <th>操作<th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<div><button name="addRow" id="labelAddButton"><b>新增身高体重信息</b></button></div>
+
+
+<style>
+
+</style>
+
+<div id="dialog-form" title="新增身高体重信息">
+    <form id="dialog-form-add">
+        <fieldset>
+            姓名:<input type="text" name="name" id="labelNewName" readonly="readonly" class="text ui-widget-content ui-corner-all"><br>
+            性别:<input type="text" name="sex" id="labelNewSex" readonly="readonly" class="text ui-widget-content ui-corner-all"><br>
+            年龄:<select size="1" name="age" id="labelNewAge" required="required" class="text ui-widget-content ui-corner-all">
+                <option></option>
+                <option value="2">2.00岁</option> <option value="2.25">2.25岁</option> <option value="2.5">2.50岁</option> <option value="2.75">2.75岁</option>
+                <option value="3">3.00岁</option> <option value="3.25">3.25岁</option> <option value="3.5">3.50岁</option> <option value="3.75">3.75岁</option>
+                <option value="4">4.00岁</option> <option value="4.25">4.25岁</option> <option value="4.5">4.50岁</option> <option value="4.75">4.75岁</option>
+                <option value="5">5.00岁</option> <option value="5.25">5.25岁</option> <option value="5.5">5.50岁</option> <option value="5.75">5.75岁</option>
+                <option value="6">6.00岁</option> <option value="6.25">6.25岁</option> <option value="6.5">6.50岁</option> <option value="6.75">6.75岁</option>
+                <option value="7">7.00岁</option> <option value="7.25">7.25岁</option> <option value="7.5">7.50岁</option> <option value="7.75">7.75岁</option>
+                <option value="8">8.00岁</option> <option value="8.25">8.25岁</option> <option value="8.5">8.50岁</option> <option value="8.75">8.75岁</option>
+                <option value="9">9.00岁</option> <option value="9.25">9.25岁</option> <option value="9.5">9.50岁</option> <option value="9.75">9.75岁</option>
+                <option value="10">10.00岁</option> <option value="10.25">10.25岁</option> <option value="10.5">10.50岁</option> <option value="10.75">10.75岁</option>
+                <option value="11">11.00岁</option> <option value="11.25">11.25岁</option> <option value="11.5">11.50岁</option> <option value="11.75">11.75岁</option>
+                <option value="12">12.00岁</option> <option value="12.25">12.25岁</option> <option value="12.5">12.50岁</option> <option value="12.75">12.75岁</option>
+                <option value="13">13.00岁</option> <option value="13.25">13.25岁</option> <option value="13.5">13.50岁</option> <option value="13.75">13.75岁</option>
+                <option value="14">14.00岁</option> <option value="14.25">14.25岁</option> <option value="14.5">14.50岁</option> <option value="14.75">14.75岁</option>
+                <option value="15">15.00岁</option> <option value="15.25">15.25岁</option> <option value="15.5">15.50岁</option> <option value="15.75">15.75岁</option>
+                <option value="16">16.00岁</option> <option value="16.25">16.25岁</option> <option value="16.5">16.50岁</option> <option value="16.75">16.75岁</option>
+                <option value="17">17.00岁</option> <option value="17.25">17.25岁</option> <option value="17.5">17.50岁</option> <option value="17.75">17.75岁</option>
+                <option value="18">18.00岁</option>
+            </select><br>
+            身高:<input type="text" name="height" id="labelNewHeight" required="required" placeholder="保留一位小数" class="text ui-widget-content ui-corner-all">cm<br>
+            体重:<input type="text" name="weight" id="labelNewWeight" required="required" placeholder="保留一位小数" class="text ui-widget-content ui-corner-all">kg<br>
+        </fieldset>
+    </form>
+</div>
+
+<div id="dialog-form2" title="">
+    <form id="dialog-form-edit">
+        <fieldset>
+            身高:<input type="text" name="height" id="labelEditHeight" required="required" placeholder="保留一位小数" class="text ui-widget-content ui-corner-all">cm<br>
+            体重:<input type="text" name="weight" id="labelEditWeight" required="required" placeholder="保留一位小数" class="text ui-widget-content ui-corner-all">kg<br>
+        </fieldset>
+    </form>
+</div>
+
+
+<script src="/thinkphp/Public/js/jquery-2.1.1.min.js"></script>
+<script src="/thinkphp/Public/js/teenagerGrow/usedFounctions.js"></script>
+<script src="/thinkphp/Public/thirdPlug/DataTables/js/jquery.dataTables.min.js"></script>
+<script src="/thinkphp/Public/thirdPlug/jqueryUI/jquery-ui.min.js"></script>
+
+<script>
+    //    通过dataTables插件从服务器请求对应表格中儿童数据信息，这里要注意返回的数据要包装成"data"名字，并且数据列数与html中列数严格匹配，不然无法显示，这个问题卡了我好久
+    $(document).ready(function() {
+        var dataSource="<?php echo U('HeightAndWeight/heightAndWeightList');?>";
+        var tables=$('#HeightAndWeightListTable').DataTable({
+            "ajax": dataSource,
+            "lengthChange":false,
+            "searching": false,
+            language: {
+                "sProcessing": "处理中...",
+                "sLengthMenu": "显示 _MENU_ 项结果",
+                "sZeroRecords": "没有匹配结果",
+                "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+                "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+                "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+                "sInfoPostFix": "",
+                "sSearch": "搜索:",
+                "sUrl": "",
+                "sEmptyTable": "表中数据为空",
+                "sLoadingRecords": "载入中...",
+                "sInfoThousands": ",",
+                "oPaginate": {
+                    "sFirst": "首页",
+                    "sPrevious": "上页",
+                    "sNext": "下页",
+                    "sLast": "末页"
+                },
+                "oAria": {
+                    "sSortAscending": ": 以升序排列此列",
+                    "sSortDescending": ": 以降序排列此列"
+                }
+            },
+            "columnDefs": [ {
+                "targets": -1,
+                "data": null,
+                "defaultContent": "<button id='editRowButton'>编辑</button><button id='deleteRowButton'>删除</button>"
+            } ],
+            "columns": [
+                { "data": "childname" },
+                { "data": "account" },
+                { "data": "childsex" },
+                { "data": "childage" },
+                { "data": "childheight" },
+                { "data": "childweight" },
+                { "data": "importtime" },
+                { "data": "importperson" },
+                null//最后一类数据不需要从服务器获取，是自定义跳转按键
+            ]
+        } );
+        //删除对应的身高体重信息行
+            $("#HeightAndWeightListTable tbody").on("click","#deleteRowButton",function(){
+                var rowAge=$(this).parents("tr").children("td:eq(3)").text();//拿到表格中儿童的年龄
+                var target="<?php echo U('HeightAndWeight/deleteHeightAndWeightRecord');?>";
+                if(confirm("是否确定删除该年龄的身高体重记录")){
+                    $.post(target,{"rowAge":rowAge},function(data){
+                        var back=data.flag;
+                        if(back==1){
+                            tables.row().remove();//删除这行的数据
+                            alert("记录删除成功")
+                            tables.ajax.reload();//重新加载ajax返回的表格数据
+                        }else{
+                            alert("记录删除失败，请重试!")
+                        }
+                    });
+                }
+            })
+        //新增身高体重信息
+        $("#labelAddButton").on("click",function() {
+//            var rowName=$("#HeightAndWeightListTable tr td:eq(0)").text();//拿到表格中儿童的姓名
+//            var rowSex=$("#HeightAndWeightListTable tr td:eq(2)").text();//拿到表格中儿童的性别
+            var rowName=decodeURI(getUrlparm("name"));//url解码，拿到表格中儿童的姓名
+            var sex=getUrlparm("sex");//拿到表格中儿童的性别
+            if(sex=="1"){
+                var rowSex="男";
+            }else {
+                rowSex="女";
+            }
+            $("#labelNewName").attr("value",rowName);//姓名填充
+            $("#labelNewSex").attr("value",rowSex);//性别填充
+            var url="<?php echo U('HeightAndWeight/addNewHeightAndWeight');?>"//提交的后台处理地址
+            $("#labelNewAge").val('');//清空上一次输入框中的年龄
+            $("#labelNewHeight").val('');//清空上一次输入框中的身高
+            $("#labelNewWeight").val('');//清空上一次输入框中的体重
+            $("#dialog-form").dialog({
+                modal:true,
+                buttons:{
+                    "确定":function(){
+                        var age=$("#labelNewAge").val();
+                        var height=$("#labelNewHeight").val();//拿到输入的身高
+                        var weight=$("#labelNewWeight").val();//拿到输入的体重
+                        /*输入不为空和小数点保留一位的检测*/
+                       if((checkIsNotNull(age)&&checkIsNotNull(height)&&checkIsNotNull(weight))){
+                           if(keepOnePoint(height)&&keepOnePoint(weight)){
+                               var message=$("#dialog-form-add").serialize();//序列化新增对话框表单的数据
+                               $.post(url,message,function(data){
+                                   switch(data.icon){
+                                       case 0:{
+                                           $("#dialog-form").dialog("close");//关闭对话框
+                                           alert("记录新增失败，请重试");
+                                           break;
+                                       }
+                                       case 1:{
+                                           $("#dialog-form").dialog("close");//关闭对话框
+                                           $("#dialog-form").dialog("destroy");//销毁对话框
+
+                                           alert("记录新增成功");
+                                           tables.ajax.reload();//重新加载ajax返回的表格数据
+                                           break;
+                                       }
+                                       case 2:{
+                                           $("#dialog-form").dialog("close");//关闭对话框
+                                           alert("该年龄段的儿童身高体重信息已存在");
+                                           break;
+                                       }
+                                   }
+                               })
+                           }
+                       }
+                    },
+                    "取消":function(){
+                        $("#dialog-form").dialog("close");//关闭对话框
+                        $("#dialog-form").dialog("destroy");//销毁对话框
+                    }
+                }
+
+
+
+            })
+        })
+        /*修改身高体重信息*/
+        $("#HeightAndWeightListTable tbody").on("click","#editRowButton",function() {
+            var rowName=$(this).parents("tr").children("td:eq(0)").text();
+            var rowAge=$(this).parents("tr").children("td:eq(3)").text();
+            $("#labelEditHeight").val('');//清空上一次输入的身高
+            $("#labelEditWeight").val('');//清空上一次输入的体重
+            $("#dialog-form2").dialog({
+                title:"编辑"+"\n"+rowName+"\n"+rowAge+"岁的身高体重信息",
+                modal: true,
+                buttons: {
+                    "确定":function(){
+                        var url="<?php echo U('HeightAndWeight/editHeightAndWeightRecord');?>"//提交的后台处理地址
+                        var height=$("#labelEditHeight").val();//拿到输入的身高
+                        var weight=$("#labelEditWeight").val();//拿到输入的体重
+                        if(checkIsNotNull(height)&&checkIsNotNull(weight)){
+                            if(keepOnePoint(height)&&keepOnePoint(weight)){
+                                $.post(url,{"height":height,"weight":weight,"age":rowAge},function(data){
+                                    switch (data.flag){
+                                        case 0:{
+                                            $("#dialog-form2").dialog("close");//关闭对话框
+                                            $("#dialog-form2").dialog("destroy");//销毁对话框
+                                            alert("记录修改失败，请重试");
+                                            break;
+                                        }
+                                        case 1:{
+                                            $("#dialog-form2").dialog("close");//关闭对话框
+                                            $("#dialog-form2").dialog("destroy");//销毁对话框
+                                            alert("记录修改成功");
+                                            tables.ajax.reload();//重新加载ajax返回的表格数据
+                                            break;
+                                        }
+                                        case 2:{
+                                            $("#dialog-form2").dialog("close");//关闭对话框
+                                            $("#dialog-form2").dialog("destroy");//销毁对话框
+                                            alert("修改失败，未找到对应儿童");
+                                            break;
+                                        }
+
+                                    }
+                                })
+                            }
+
+                        }
+                    },
+                    "取消":function(){
+                        $("#dialog-form2").dialog("close");//关闭对话框
+
+                    }
+
+                }
+            })
+        })
+
+    });
+</script>
+</body>
+</html>

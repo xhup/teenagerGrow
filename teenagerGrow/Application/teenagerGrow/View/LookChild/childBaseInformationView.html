@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>儿童基本信息</title>
+    <link rel="stylesheet" media="screen" href="__PUBLIC__/css/teenagerGrow/unvStyle.css">
+    <link rel="stylesheet" media="screen" href="__PUBLIC__/css/bootstrap.min.css">
+    <link rel="stylesheet" media="screen" href="__PUBLIC__/thirdPlug/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
+
+</head>
+<body>
+
+<form action="childBaseInfoHandle" method="post">
+    <table align="center"  width="100%" class="messageInput" border="1">
+        <tr>
+            <td align="center">姓名:</td>
+            <td><input type="text" name="real_name" width="20" id="showChildName"></td>
+            <td align="center">民族:</td>
+            <td><input type="text" name="nation" width="20" id="showNation"></td>
+            <td align="center">性别:</td>
+            <td>
+                <select size="1" name="sex" id="showChildSex">
+                    <option></option>
+                    <option value="男">男</option>
+                    <option value="女">女</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center">出生日期:</td>
+            <td><input type="text" name="childBirthday" id="showBirthday" width="20" data-provide="datepicker" class="datepicker"></td>
+            <td align="center">身份证号:</td>
+            <td><input type="text" name="idCard" width="20" id="showChildID"></td>
+            <td align="center">就诊号:</td>
+            <td><input type="text" name="medicalID" width="20" id="showMedicalID" readonly="readonly" style="background-color: #9d9d9d"></td>
+        </tr>
+
+        <tr>
+            <td align="center">联系电话:</td>
+            <td><input type="text" name="phone" width="20" id="showChildPhone"></td>
+            <td align="center">身高:</td>
+            <td><input type="text" name="height" width="20" id="showChildHeight" readonly="readonly" style="background-color: #9d9d9d"></td>
+            <td align="center">体重:</td>
+            <td><input type="text" name="weight" width="20" id="showChildWeight" readonly="readonly" style="background-color: #9d9d9d"></td>
+        </tr>
+        <!--<tr>-->
+        <!--<td align="right"><b>邮箱:</td>-->
+        <!--<td><input type="text" name="email" width="20" id="show_email" required="required">*****必填</td>-->
+        <!--</tr>-->
+        <tr>
+            <td align="center">家庭住址:</td>
+            <td>浙江省</td>
+            <td align="center">市(区)</td>
+            <td>
+            <select size="1" name="city" id="showCity">
+    <option></option>
+    <option value="杭州市">杭州市</option> <option value="宁波市">宁波市</option> <option value="温州市">温州市</option>
+    <option value="台州市">台州市</option> <option value="嘉兴市">嘉兴市</option> <option value="绍兴市">绍兴市</option>
+    <option value="湖州市">湖州市</option> <option value="金华市">金华市</option> <option value="衢州市">衢州市</option>
+    <option value="丽水市">丽水市</option> <option value="舟山市">舟山市</option>
+</select>
+</td>
+<td align="center"> 地址</td>
+<td><input type="text" name="address" id="showAddress"></td>
+</tr>
+
+
+<tr>
+    <td align="center" colspan="3">  <input type="submit" value="确认" class="btn btn-info"> </td>
+    <td align="center" colspan="3">  <input type="button" value="取消" class="btn btn-info" onclick="cancel()"></td>
+</tr>
+</table>
+</form>
+
+<script src="__PUBLIC__/js/jquery-2.1.1.min.js"></script>
+<script src="__PUBLIC__/js/teenagerGrow/usedFounctions.js"></script>
+<script src="__PUBLIC__/thirdPlug/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script>
+    /*Ajax获取登录用户信息并显示*/
+    $(function(){
+        var url="showDetailInfo";
+        $.post(url,{"dataForm":"BaseInformation"},function(data){
+            $("#showChildName").attr("value",data.name);
+            $("#showNation").attr("value",data.nation);
+            document.getElementById('showChildSex').value=data.sex;
+            $("#showBirthday").attr("value",data.birthdate);
+            $("#showChildID").attr("value",data.childidcard);
+            $("#showMedicalID").attr("value",data.account);
+            $("#showChildPhone").attr("value",data.childphone);
+            $("#showChildHeight").attr("value",data.latestheight);
+            $("#showChildWeight").attr("value",data.latestweight);
+            document.getElementById('showCity').value =data.city;
+            $("#showAddress").attr("value",data.address);
+        })
+    })
+</script>
+</body>
+</html>

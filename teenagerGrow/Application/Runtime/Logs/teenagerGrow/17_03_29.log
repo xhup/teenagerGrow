@@ -1,0 +1,98 @@
+[ 2017-03-29T14:48:56+08:00 ] 192.168.1.118 /thinkphp/index.php/mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001624s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001841s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001962s ]
+SQL: SHOW COLUMNS FROM `tg_mobile_user` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `tg_mobile_user` WHERE `mobileID` = '188688' AND `password` = '123456' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tg_base_information` [ RunTime:0.0083s ]
+SQL: SELECT `account`,`name`,`sex`,`birthdate` FROM `tg_base_information` WHERE ( mobileID='188688' )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `tg_grow_data` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `tg_grow_data` WHERE ( mobileID='188688' )  [ RunTime:0.0234s ]
+
+[ 2017-03-29T15:00:48+08:00 ] 192.168.1.118 /thinkphp/index.php/mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000491s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000706s ]
+SQL: SHOW COLUMNS FROM `tg_mobile_user` [ RunTime:0.0138s ]
+SQL: SELECT * FROM `tg_mobile_user` WHERE `mobileID` = '188688' AND `password` = '123456' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `tg_base_information` [ RunTime:0.0133s ]
+SQL: SELECT `account`,`name`,`sex`,`birthdate` FROM `tg_base_information` WHERE ( mobileID='188688' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tg_grow_data` [ RunTime:0.0087s ]
+SQL: SELECT * FROM `tg_grow_data` WHERE ( mobileID='188688' )  [ RunTime:0.0006s ]
+
+[ 2017-03-29T15:01:04+08:00 ] 192.168.1.118 /thinkphp/index.php/mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000783s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001095s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001184s ]
+SQL: SHOW COLUMNS FROM `tg_mobile_user` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `tg_mobile_user` WHERE `mobileID` = '188688' AND `password` = '123456' LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `tg_base_information` [ RunTime:0.0119s ]
+SQL: SELECT `account`,`name`,`sex`,`birthdate` FROM `tg_base_information` WHERE ( mobileID='188688' )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tg_grow_data` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `tg_grow_data` WHERE ( mobileID='188688' )  [ RunTime:0.0006s ]
+
+[ 2017-03-29T15:15:45+08:00 ] 192.168.1.118 /thinkphp/index.php/mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000988s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001162s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001250s ]
+SQL: SHOW COLUMNS FROM `tg_mobile_user` [ RunTime:0.0143s ]
+SQL: SELECT * FROM `tg_mobile_user` WHERE `mobileID` = '188688' AND `password` = '123456' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tg_base_information` [ RunTime:0.0094s ]
+SQL: SELECT `account`,`name`,`sex`,`birthdate` FROM `tg_base_information` WHERE ( mobileID='188688' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `tg_grow_data` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `tg_grow_data` WHERE ( mobileID='188688' )  [ RunTime:0.0005s ]
+
+[ 2017-03-29T15:22:04+08:00 ] 192.168.1.118 /thinkphp/index.php/mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000849s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001354s ]
+SQL: SHOW COLUMNS FROM `tg_mobile_user` [ RunTime:0.0215s ]
+SQL: SELECT * FROM `tg_mobile_user` WHERE `mobileID` = '188688' AND `password` = '123456' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tg_base_information` [ RunTime:0.0152s ]
+SQL: SELECT `account`,`name`,`sex`,`birthdate` FROM `tg_base_information` WHERE ( mobileID='188688' )  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `tg_grow_data` [ RunTime:0.0073s ]
+SQL: SELECT * FROM `tg_grow_data` WHERE ( mobileID='188688' )  [ RunTime:0.0006s ]
+
+[ 2017-03-29T15:24:33+08:00 ] 192.168.1.118 /thinkphp/index.php/mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001539s ]
+SQL: SHOW COLUMNS FROM `tg_mobile_user` [ RunTime:0.0129s ]
+SQL: SELECT * FROM `tg_mobile_user` WHERE `mobileID` = '188688' AND `password` = '123456' LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `tg_base_information` [ RunTime:0.0163s ]
+SQL: SELECT `account`,`name`,`sex`,`birthdate` FROM `tg_base_information` WHERE ( mobileID='188688' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `tg_grow_data` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `tg_grow_data` WHERE ( mobileID='188688' )  [ RunTime:0.0006s ]
+
+[ 2017-03-29T15:26:47+08:00 ] 192.168.1.118 /thinkphp/index.php/mobile/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000640s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000927s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000984s ]
+SQL: SHOW COLUMNS FROM `tg_mobile_user` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `tg_mobile_user` WHERE `mobileID` = '188688' AND `password` = '123456' LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `tg_base_information` [ RunTime:0.0071s ]
+SQL: SELECT `account`,`name`,`sex`,`birthdate` FROM `tg_base_information` WHERE ( mobileID='188688' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `tg_grow_data` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `tg_grow_data` WHERE ( mobileID='188688' )  [ RunTime:0.0004s ]
+
